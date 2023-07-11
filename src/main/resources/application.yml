@@ -1,0 +1,30 @@
+server:
+  port: 8081
+  error:
+    include-message: always 
+  
+  #----------- Connect mySQL ----------
+
+#Instructions for the connection-
+# 1. Open mySQL 
+# 2. open MySQL tab 
+# 3. write - 
+#     create database recipseAPI_db;
+#     use recipseAPI_db;
+# 4. Change the username and password in application.yml
+# 5. Run the Project :)
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: Shachar
+    url: jdbc:mysql://localhost:3306/recipseAPI_db
+    password: 28051996
+    
+  jpa: 
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: true
+    
+  
